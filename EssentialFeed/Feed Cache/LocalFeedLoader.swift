@@ -43,12 +43,8 @@ public final class LocalFeedLoader {
                 completion(.success(feed.toModels()))
                 break
                 
-            case .found:
+            case .found, .empty:
                 completion(.success([]))
-
-            case .empty:
-                completion(.success([]))
-                
             }
         }
     }
@@ -66,9 +62,7 @@ public final class LocalFeedLoader {
                 
             case .empty, .found:
                 break
-                
             }
-
         }
     }
     
