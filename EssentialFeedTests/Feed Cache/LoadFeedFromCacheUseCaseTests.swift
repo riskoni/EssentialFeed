@@ -29,7 +29,7 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
         let retrievalError = anyNSError()
         
         expect(sut, toCompleteWith: .failure(retrievalError)) {
-            store.completRetrieval(with: retrievalError)
+            store.completeRetrieval(with: retrievalError)
         }
     }
     
@@ -37,7 +37,7 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
         let (sut, store) = makeSUT()
         
         expect(sut, toCompleteWith: .success([])) {
-            store.completRetrievalWithEmptyCache()
+            store.completeRetrievalWithEmptyCache()
         }
     }
     
@@ -48,7 +48,7 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
         let feed = uniqueImageFeed()
         
         expect(sut, toCompleteWith: .success(feed.models)) {
-            store.completRetrieval(with: feed.local, timestamp: lessThanSevenDaysOldTimestamp)
+            store.completeRetrieval(with: feed.local, timestamp: lessThanSevenDaysOldTimestamp)
         }
     }
     
@@ -59,7 +59,7 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
         let feed = uniqueImageFeed()
         
         expect(sut, toCompleteWith: .success([])) {
-            store.completRetrieval(with: feed.local, timestamp: sevenDaysOldTimestamp)
+            store.completeRetrieval(with: feed.local, timestamp: sevenDaysOldTimestamp)
         }
     }
     
@@ -70,7 +70,7 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
         let feed = uniqueImageFeed()
         
         expect(sut, toCompleteWith: .success([])) {
-            store.completRetrieval(with: feed.local, timestamp: moreThanSevenDaysOldTimestamp)
+            store.completeRetrieval(with: feed.local, timestamp: moreThanSevenDaysOldTimestamp)
         }
     }
     
@@ -78,7 +78,7 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
         let (sut, store) = makeSUT()
         sut.load() { _ in }
         
-        store.completRetrieval(with: anyNSError())
+        store.completeRetrieval(with: anyNSError())
      
         XCTAssertEqual(store.receivedMessages, [.retrieve, .deleteCachedFeed])
     }
