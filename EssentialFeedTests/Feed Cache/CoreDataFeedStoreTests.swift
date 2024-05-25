@@ -35,12 +35,12 @@ class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
     }
 
     func test_retrieve_deliversFailureOnRetrievalError() {
-//        let stub = NSManagedObjectContext.alwaysFailingFetchStub()
-//        stub.startIntercepting()
-//
-//        let sut = try makeSUT()
-//
-//        assertThatRetrieveDeliversFailureOnRetrievalError(on: sut)
+        let stub = NSManagedObjectContext.alwaysFailingFetchStub()
+        stub.startIntercepting()
+
+        let sut = makeSUT()
+
+        assertThatRetrieveDeliversFailureOnRetrievalError(on: sut)
     }
 
     func test_retrieve_hasNoSideEffectsOnFailure() {

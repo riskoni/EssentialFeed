@@ -43,7 +43,14 @@ public final class CoreDataFeedStore: FeedStore {
     }
 
     public func retrieve(completion: @escaping RetrievalCompletion) {
-        completion(.empty)
+        let request = NSFetchRequest<FeedEntity>(entityName: FeedEntity.className())
+        do{
+            let _ = try context.fetch(request).last
+            completion(.empty)
+        } catch {
+            completion(.failure(error))
+        }
+
     }
 
     public func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
