@@ -59,41 +59,49 @@ public final class CoreDataFeedStore: FeedStore {
     }
     
     public func retrieve(completion: @escaping RetrievalCompletion) {
-        let request = NSFetchRequest<FeedEntity>(entityName: FeedEntity.className())
-        request.returnsObjectsAsFaults = false
-        do{
-            let feedEntity = try context.fetch(request).last
-            completion(CoreDataFeedStore.toRetrievaResult(feedEntity))
-        } catch {
-            context.rollback()ç
-            completion(.failure(error))
+        let context = self.context
+        context.perform {
+            let request = NSFetchRequest<FeedEntity>(entityName: FeedEntity.className())
+            request.returnsObjectsAsFaults = false
+            do{
+                let feedEntity = try context.fetch(request).last
+                completion(CoreDataFeedStore.toRetrievaResult(feedEntity))
+            } catch {
+                context.rollback()
+                completion(.failure(error))
+            }
         }
-        
     }
     
     public func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
-        
-        try? CoreDataFeedStore.deleteAllFeedEntities(context: context)
-
-        let feedEntity = FeedEntity(context: context)
-        feedEntity.timestamp = timestamp
-        feedEntity.images = NSOrderedSet(array: feed.toFeedImageEntites(context: context))        
-        do{
-            try context.save()
-            completion(nil)
-        }catch {
-            context.rollback()
-            completion(error)
+        let context = self.context
+        context.perform {
+            
+            try? CoreDataFeedStore.deleteAllFeedEntities(context: context)
+            
+            let feedEntity = FeedEntity(context: context)
+            feedEntity.timestamp = timestamp
+            feedEntity.images = NSOrderedSet(array: feed.toFeedImageEntites(context: context))
+            do{
+                try context.save()
+                completion(nil)
+            }catch {
+                context.rollback()
+                completion(error)
+            }
         }
     }
     
     public func deleteCachedFeed(completion: @escaping DeletionCompletion) {
-        do{
-            try CoreDataFeedStore.deleteAllFeedEntities(context: context)
-            completion(nil)
-        }catch {
-            context.rollback()
-            completion(error)
+        let context = self.context
+        context.perform {            
+            do{
+                try CoreDataFeedStore.deleteAllFeedEntities(context: context)
+                completion(nil)
+            }catch {
+                context.rollback()
+                completion(error)
+            }
         }
     }
 }
