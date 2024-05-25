@@ -53,7 +53,7 @@ class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
     }
 
     func test_insert_deliversNoErrorOnEmptyCache() {
-        let sut = try makeSUT()
+        let sut = makeSUT()
 
         assertThatInsertDeliversNoErrorOnEmptyCache(on: sut)
     }
@@ -89,9 +89,9 @@ class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
     }
 
     func test_delete_deliversNoErrorOnEmptyCache() {
-//        let sut = try makeSUT()
-//
-//        assertThatDeleteDeliversNoErrorOnEmptyCache(on: sut)
+        let sut = makeSUT()
+
+        assertThatDeleteDeliversNoErrorOnEmptyCache(on: sut)
     }
 
     func test_delete_hasNoSideEffectsOnEmptyCache() {
