@@ -65,6 +65,7 @@ public final class CoreDataFeedStore: FeedStore {
             let feedEntity = try context.fetch(request).last
             completion(CoreDataFeedStore.toRetrievaResult(feedEntity))
         } catch {
+            context.rollback()ç
             completion(.failure(error))
         }
         
@@ -91,6 +92,7 @@ public final class CoreDataFeedStore: FeedStore {
             try CoreDataFeedStore.deleteAllFeedEntities(context: context)
             completion(nil)
         }catch {
+            context.rollback()
             completion(error)
         }
     }
