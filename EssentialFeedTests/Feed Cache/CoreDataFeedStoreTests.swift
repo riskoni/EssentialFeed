@@ -1,0 +1,202 @@
+//
+//  CoreDataFeedStoreTests.swift
+//  EssentialFeedTests
+//
+//  Created by Nikolay on 25.05.24.
+//
+
+import XCTest
+import EssentialFeed
+
+class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
+    
+    func test_retrieve_deliversEmptyOnEmptyCache() {
+//        let sut = makeSUT()
+//
+//        assertThatRetrieveDeliversEmptyOnEmptyCache(on: sut)
+    }
+
+    func test_retrieve_hasNoSideEffectsOnEmptyCache() {
+//        let sut = try makeSUT()
+//
+//        assertThatRetrieveHasNoSideEffectsOnEmptyCache(on: sut)
+    }
+
+    func test_retrieve_deliversFoundValuesOnNonEmptyCache() {
+//        let sut = try makeSUT()
+//
+//        assertThatRetrieveDeliversFoundValuesOnNonEmptyCache(on: sut)
+    }
+
+    func test_retrieve_hasNoSideEffectsOnNonEmptyCache() {
+//        let sut = try makeSUT()
+//
+//        assertThatRetrieveHasNoSideEffectsOnNonEmptyCache(on: sut)
+    }
+
+    func test_retrieve_deliversFailureOnRetrievalError() {
+//        let stub = NSManagedObjectContext.alwaysFailingFetchStub()
+//        stub.startIntercepting()
+//
+//        let sut = try makeSUT()
+//
+//        assertThatRetrieveDeliversFailureOnRetrievalError(on: sut)
+    }
+
+    func test_retrieve_hasNoSideEffectsOnFailure() {
+//        let stub = NSManagedObjectContext.alwaysFailingFetchStub()
+//        stub.startIntercepting()
+//
+//        let sut = try makeSUT()
+//
+//        assertThatRetrieveHasNoSideEffectsOnFailure(on: sut)
+    }
+
+    func test_insert_deliversNoErrorOnEmptyCache() {
+//        let sut = try makeSUT()
+//
+//        assertThatInsertDeliversNoErrorOnEmptyCache(on: sut)
+    }
+
+    func test_insert_deliversNoErrorOnNonEmptyCache() {
+//        let sut = try makeSUT()
+//
+//        assertThatInsertDeliversNoErrorOnNonEmptyCache(on: sut)
+    }
+
+    func test_insert_overridesPreviouslyInsertedCacheValues() {
+//        let sut = try makeSUT()
+//
+//        assertThatInsertOverridesPreviouslyInsertedCacheValues(on: sut)
+    }
+
+    func test_insert_deliversErrorOnInsertionError() {
+//        let stub = NSManagedObjectContext.alwaysFailingSaveStub()
+//        stub.startIntercepting()
+//
+//        let sut = try makeSUT()
+//
+//        assertThatInsertDeliversErrorOnInsertionError(on: sut)
+    }
+
+    func test_insert_hasNoSideEffectsOnInsertionError() {
+//        let stub = NSManagedObjectContext.alwaysFailingSaveStub()
+//        stub.startIntercepting()
+//
+//        let sut = try makeSUT()
+//
+//        assertThatInsertHasNoSideEffectsOnInsertionError(on: sut)
+    }
+
+    func test_delete_deliversNoErrorOnEmptyCache() {
+//        let sut = try makeSUT()
+//
+//        assertThatDeleteDeliversNoErrorOnEmptyCache(on: sut)
+    }
+
+    func test_delete_hasNoSideEffectsOnEmptyCache() {
+//        let sut = try makeSUT()
+//
+//        assertThatDeleteHasNoSideEffectsOnEmptyCache(on: sut)
+    }
+
+    func test_delete_deliversNoErrorOnNonEmptyCache() {
+//        let sut = try makeSUT()
+//
+//        assertThatDeleteDeliversNoErrorOnNonEmptyCache(on: sut)
+    }
+
+    func test_delete_emptiesPreviouslyInsertedCache() {
+//        let sut = try makeSUT()
+//
+//        assertThatDeleteEmptiesPreviouslyInsertedCache(on: sut)
+    }
+
+    func test_delete_deliversErrorOnDeletionError() {
+//        let stub = NSManagedObjectContext.alwaysFailingSaveStub()
+//        let feed = uniqueImageFeed()
+//        let timestamp = Date()
+//        let sut = try makeSUT()
+//
+//        insert((feed, timestamp), to: sut)
+//
+//        stub.startIntercepting()
+//
+//        let deletionError = deleteCache(from: sut)
+//
+//        XCTAssertNotNil(deletionError, "Expected cache deletion to fail")
+    }
+
+    func test_delete_hasNoSideEffectsOnDeletionError() {
+//        let stub = NSManagedObjectContext.alwaysFailingSaveStub()
+//        let feed = uniqueImageFeed()
+//        let timestamp = Date()
+//        let sut = try makeSUT()
+//
+//        insert((feed, timestamp), to: sut)
+//
+//        stub.startIntercepting()
+//
+//        deleteCache(from: sut)
+//
+//        expect(sut, toRetrieve: .found(feed: feed, timestamp: timestamp))
+    }
+
+    func test_delete_removesAllObjects() {
+//        let store = try makeSUT()
+//
+//        insert((uniqueImageFeed(), Date()), to: store)
+//
+//        deleteCache(from: store)
+//
+//        let context = try NSPersistentContainer.load(
+//            name: CoreDataFeedStore.modelName,
+//            model: XCTUnwrap(CoreDataFeedStore.model),
+//            url: inMemoryStoreURL()
+//        ).viewContext
+//
+//        let existingObjects = try context.allExistingObjects()
+//
+//        XCTAssertEqual(existingObjects, [], "found orphaned objects in Core Data")
+    }
+
+    func test_storeSideEffects_runSerially() {
+//        let sut = try makeSUT()
+//
+//        assertThatSideEffectsRunSerially(on: sut)
+    }
+
+    func test_imageEntity_properties() {
+//        let entity = try XCTUnwrap(
+//            CoreDataFeedStore.model?.entitiesByName["ENTER_YOUR_CORE_DATA_IMAGE_ENTITY_NAME"]
+//        )
+//
+//        // Instructions: update the attribute
+//        // names if they don't match the names
+//        // on your Core Data entity
+//
+//        entity.verify(attribute: "id", hasType: .UUIDAttributeType, isOptional: false)
+//        entity.verify(attribute: "imageDescription", hasType: .stringAttributeType, isOptional: true)
+//        entity.verify(attribute: "location", hasType: .stringAttributeType, isOptional: true)
+//        entity.verify(attribute: "url", hasType: .URIAttributeType, isOptional: false)
+    }
+
+    // - MARK: Helpers
+
+    private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> FeedStore {
+        let sut = try! CoreDataFeedStore(storeURL: inMemoryStoreURL())
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return sut
+    }
+
+    private func inMemoryStoreURL() -> URL {
+        URL(fileURLWithPath: "/dev/null")
+            .appendingPathComponent("\(type(of: self)).store")
+    }
+}
+
+extension CoreDataFeedStore.ModelNotFound: CustomStringConvertible {
+    public var description: String {
+        "Core Data Model '\(modelName).xcdatamodeld' not found. You need to create it in the production target."
+    }
+}
