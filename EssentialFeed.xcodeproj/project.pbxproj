@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9705C19C2C0259610049ECC7 /* NSEntityDescription+Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9705C19B2C0259610049ECC7 /* NSEntityDescription+Assertions.swift */; };
 		971A66602B25F57600125DAC /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971A66572B25F57500125DAC /* EssentialFeed.framework */; };
 		971A66702B25F59D00125DAC /* FeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A666F2B25F59D00125DAC /* FeedImage.swift */; };
 		971A66722B25F65B00125DAC /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971A66712B25F65B00125DAC /* FeedLoader.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9705C19B2C0259610049ECC7 /* NSEntityDescription+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSEntityDescription+Assertions.swift"; sourceTree = "<group>"; };
 		971A66572B25F57500125DAC /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		971A665F2B25F57600125DAC /* EssentialFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		971A666F2B25F59D00125DAC /* FeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImage.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				97356DDF2BFFE812007B2149 /* FeedCacheTestHelpers.swift */,
 				979C100C2C0212C00069A60E /* NSManagedObjectContext+Stub.swift */,
 				97373F242C021FFE006B2825 /* NSManagedObjectContext+Helpers.swift */,
+				9705C19B2C0259610049ECC7 /* NSEntityDescription+Assertions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -491,6 +494,7 @@
 				971A66752B25F7CE00125DAC /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 				9777FBAB2B2901A2004DF1E3 /* URLSessionHTTPClientTests.swift in Sources */,
 				979C100D2C0212C00069A60E /* NSManagedObjectContext+Stub.swift in Sources */,
+				9705C19C2C0259610049ECC7 /* NSEntityDescription+Assertions.swift in Sources */,
 				9795D6EF2BFE8EEB00650FD7 /* FeedStoreSpy.swift in Sources */,
 				97356DE22BFFE897007B2149 /* SharedTestHelpers.swift in Sources */,
 				975AF93D2BFD3C580051469D /* CacheFeedUseCaseTests.swift in Sources */,
