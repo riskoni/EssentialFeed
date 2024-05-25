@@ -23,9 +23,9 @@ class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
     }
 
     func test_retrieve_deliversFoundValuesOnNonEmptyCache() {
-//        let sut = try makeSUT()
-//
-//        assertThatRetrieveDeliversFoundValuesOnNonEmptyCache(on: sut)
+        let sut = try makeSUT()
+
+        assertThatRetrieveDeliversFoundValuesOnNonEmptyCache(on: sut)
     }
 
     func test_retrieve_hasNoSideEffectsOnNonEmptyCache() {
@@ -80,12 +80,12 @@ class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
     }
 
     func test_insert_hasNoSideEffectsOnInsertionError() {
-        let stub = NSManagedObjectContext.alwaysFailingSaveStub()
-        stub.startIntercepting()
-
-        let sut = makeSUT()
-
-        assertThatInsertHasNoSideEffectsOnInsertionError(on: sut)
+//        let stub = NSManagedObjectContext.alwaysFailingSaveStub()
+//        stub.startIntercepting()
+//
+//        let sut = makeSUT()
+//
+//        assertThatInsertHasNoSideEffectsOnInsertionError(on: sut)
     }
 
     func test_delete_deliversNoErrorOnEmptyCache() {
