@@ -44,6 +44,7 @@ public final class CoreDataFeedStore: FeedStore {
     
     public func retrieve(completion: @escaping RetrievalCompletion) {
         let request = NSFetchRequest<FeedEntity>(entityName: FeedEntity.className())
+        request.returnsObjectsAsFaults = false
         do{
             let feedEntity = try context.fetch(request).last
             guard let feedEntity = feedEntity else {
