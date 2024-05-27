@@ -42,21 +42,7 @@ public final class CoreDataFeedStore: FeedStore {
         }
     }
     
-    private static func deleteAllFeedEntities(context: NSManagedObjectContext) throws {
-        let request = NSFetchRequest<FeedEntity>(entityName: FeedEntity.className())
-        try context.fetch(request).forEach {
-            context.delete($0)
-            try context.save()
-        }
-    }
-    
-    private static func toRetrievaResult(_ feedEntity: FeedEntity?) -> RetrieveCachedFeedResult {
-        guard let feedEntity = feedEntity else {
-            return .empty
-        }
-        let images = feedEntity.images?.compactMap { ($0 as? FeedImageEntity)?.toLocalFeedImage() } ?? []
-        return .found(feed: images, timestamp: feedEntity.timestamp!)
-    }
+  
     
     public func retrieve(completion: @escaping RetrievalCompletion) {
         let context = self.context
@@ -79,11 +65,8 @@ public final class CoreDataFeedStore: FeedStore {
             
             try? CoreDataFeedStore.deleteAllFeedEntities(context: context)
             
-            let feedEntity = FeedEntity(context: context)
-            feedEntity.timestamp = timestamp
-            feedEntity.images = NSOrderedSet(array: feed.toFeedImageEntites(context: context))
             do{
-                try context.save()
+                try CoreDataFeedStore.saveFeedEntity(feed: feed, timestamp: timestamp, in: context)
                 completion(nil)
             }catch {
                 context.rollback()
@@ -103,6 +86,29 @@ public final class CoreDataFeedStore: FeedStore {
                 completion(error)
             }
         }
+    }
+    
+    private static func saveFeedEntity(feed: [LocalFeedImage], timestamp: Date, in context: NSManagedObjectContext) throws {
+        let feedEntity = FeedEntity(context: context)
+        feedEntity.timestamp = timestamp
+        feedEntity.images = NSOrderedSet(array: feed.toFeedImageEntites(context: context))
+        try context.save()
+    }
+    
+    private static func deleteAllFeedEntities(context: NSManagedObjectContext) throws {
+        let request = NSFetchRequest<FeedEntity>(entityName: FeedEntity.className())
+        try context.fetch(request).forEach {
+            context.delete($0)
+            try context.save()
+        }
+    }
+    
+    private static func toRetrievaResult(_ feedEntity: FeedEntity?) -> RetrieveCachedFeedResult {
+        guard let feedEntity = feedEntity else {
+            return .empty
+        }
+        let images = feedEntity.images?.compactMap { ($0 as? FeedImageEntity)?.toLocalFeedImage() } ?? []
+        return .found(feed: images, timestamp: feedEntity.timestamp!)
     }
 }
 
