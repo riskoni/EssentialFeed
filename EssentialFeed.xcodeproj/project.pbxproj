@@ -236,8 +236,6 @@
 				97356DDD2BFFE4A0007B2149 /* ValidateFeedCacheUseCaseTests.swift */,
 				97FFB29A2C011E5000C2E755 /* CodableFeedStoreTests.swift */,
 				979C10072C020F6E0069A60E /* CoreDataFeedStoreTests.swift */,
-				979C0FEF2C0202F80069A60E /* FeedStroreSpecs.swift */,
-				979C0FF12C0203770069A60E /* XCTestCase+FeedStoreSpecs.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -254,6 +252,8 @@
 		9795D6ED2BFE8EDD00650FD7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				979C0FEF2C0202F80069A60E /* FeedStroreSpecs.swift */,
+				979C0FF12C0203770069A60E /* XCTestCase+FeedStoreSpecs.swift */,
 				9795D6EE2BFE8EEB00650FD7 /* FeedStoreSpy.swift */,
 				97356DDF2BFFE812007B2149 /* FeedCacheTestHelpers.swift */,
 				979C100C2C0212C00069A60E /* NSManagedObjectContext+Stub.swift */,
