@@ -220,7 +220,6 @@
 				9795D6E92BFE89D700650FD7 /* LocalFeedImage.swift */,
 				97356DE32BFFF003007B2149 /* FeedCachePolicy.swift */,
 				979C10022C020DFA0069A60E /* CoreDataFeedStore.swift */,
-				979C10092C0211720069A60E /* FeedStore.xcdatamodeld */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -272,6 +271,7 @@
 		979C10062C020EF90069A60E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				979C10092C0211720069A60E /* FeedStore.xcdatamodeld */,
 				979C10042C020EEE0069A60E /* CoreDataHelpers.swift */,
 			);
 			path = Helpers;
@@ -886,8 +886,7 @@
 				979C100A2C0211720069A60E /* FeedStore.xcdatamodel */,
 			);
 			currentVersion = 979C100A2C0211720069A60E /* FeedStore.xcdatamodel */;
-			name = FeedStore.xcdatamodeld;
-			path = "/Users/riskov/projects/essentialdev/EssentialFeed/EssentialFeed/Feed Cache/FeedStore.xcdatamodeld";
+			path = FeedStore.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
