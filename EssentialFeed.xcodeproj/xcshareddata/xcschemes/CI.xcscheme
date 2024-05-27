@@ -36,6 +36,9 @@
          <TestPlanReference
             reference = "container:EssentialFeedAPIEndToEndTests/EssentialFeedAPIEndToEndTests.xctestplan">
          </TestPlanReference>
+         <TestPlanReference
+            reference = "container:EssentialFeedCacheIntegrationTests/EssentialFeedCacheIntegrationTests.xctestplan">
+         </TestPlanReference>
       </TestPlans>
    </TestAction>
    <LaunchAction
