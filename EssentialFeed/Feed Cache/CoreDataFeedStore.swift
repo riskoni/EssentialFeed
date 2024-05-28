@@ -67,10 +67,10 @@ public final class CoreDataFeedStore: FeedStore {
             
             do{
                 try CoreDataFeedStore.saveFeedEntity(feed: feed, timestamp: timestamp, in: context)
-                completion(nil)
+                completion(.success(()))
             }catch {
                 context.rollback()
-                completion(error)
+                completion(.failure(error))
             }
         }
     }
@@ -80,10 +80,10 @@ public final class CoreDataFeedStore: FeedStore {
         context.perform {            
             do{
                 try CoreDataFeedStore.deleteAllFeedEntities(context: context)
-                completion(nil)
+                completion(.success(()))
             }catch {
                 context.rollback()
-                completion(error)
+                completion(.failure(error))
             }
         }
     }
