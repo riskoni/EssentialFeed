@@ -105,10 +105,10 @@ public final class CoreDataFeedStore: FeedStore {
     
     private static func toRetrievaResult(_ feedEntity: FeedEntity?) -> FeedStore.RetrievalResult {
         guard let feedEntity = feedEntity else {
-            return .success(.empty)
+            return .success(.none)
         }
         let images = feedEntity.images?.compactMap { ($0 as? FeedImageEntity)?.toLocalFeedImage() } ?? []
-        return .success(.found(feed: images, timestamp: feedEntity.timestamp!))
+        return .success(CachedFeed(feed: images, timestamp: feedEntity.timestamp!))
     }
 }
 
