@@ -37,7 +37,7 @@
                                             <rect key="frame" x="20" y="17" width="353" height="546"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="H36-Wm-ePI" userLabel="Location Container">
-                                                    <rect key="frame" x="0.0" y="0.0" width="79" height="77.333333333333329"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="77.333333333333329"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Zf-9p-kpb" userLabel="Pin Container">
                                                             <rect key="frame" x="0.0" y="0.0" width="10" height="76"/>
@@ -56,8 +56,8 @@
                                                                 <constraint firstAttribute="width" constant="10" id="u9S-8O-fsn"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location, Location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGp-6X-8aG">
-                                                            <rect key="frame" x="16" y="0.0" width="63" height="36"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Location, Location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGp-6X-8aG">
+                                                            <rect key="frame" x="16" y="0.0" width="337" height="36"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -94,7 +94,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="H36-Wm-ePI" firstAttribute="width" secondItem="cKq-nQ-COy" secondAttribute="width" multiplier="0.223796" id="WZT-Tb-YlY"/>
+                                                <constraint firstAttribute="trailing" secondItem="H36-Wm-ePI" secondAttribute="trailing" id="SOw-PE-ngc"/>
                                                 <constraint firstItem="6iu-pK-6TO" firstAttribute="width" secondItem="cKq-nQ-COy" secondAttribute="width" id="xoc-OU-fdb"/>
                                             </constraints>
                                         </stackView>
