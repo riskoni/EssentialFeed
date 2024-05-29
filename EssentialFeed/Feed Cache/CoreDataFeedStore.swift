@@ -128,6 +128,18 @@ extension Array<LocalFeedImage> {
     }
 }
 
+#if os(iOS)
+
+extension FeedEntity {
+    
+    static func className() -> String {
+        return String(describing: self)
+    }
+    
+}
+
+#endif
+
 extension FeedImageEntity {
     
     func toLocalFeedImage() -> LocalFeedImage? {
