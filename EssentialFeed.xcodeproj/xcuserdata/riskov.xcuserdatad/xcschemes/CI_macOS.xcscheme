@@ -21,6 +21,48 @@
                ReferencedContainer = "container:EssentialFeed.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "97F224332BFBDB5700B656FF"
+               BuildableName = "EssentialFeedAPIEndToEndTests.xctest"
+               BlueprintName = "EssentialFeedAPIEndToEndTests"
+               ReferencedContainer = "container:EssentialFeed.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "979C0FF62C020AE30069A60E"
+               BuildableName = "EssentialFeedCacheIntegrationTests.xctest"
+               BlueprintName = "EssentialFeedCacheIntegrationTests"
+               ReferencedContainer = "container:EssentialFeed.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "971A665E2B25F57600125DAC"
+               BuildableName = "EssentialFeedTests.xctest"
+               BlueprintName = "EssentialFeedTests"
+               ReferencedContainer = "container:EssentialFeed.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -30,14 +72,8 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:EssentialFeed.xctestplan"
+            reference = "container:CI_macOS.xctestplan"
             default = "YES">
-         </TestPlanReference>
-         <TestPlanReference
-            reference = "container:EssentialFeedAPIEndToEndTests/EssentialFeedAPIEndToEndTests.xctestplan">
-         </TestPlanReference>
-         <TestPlanReference
-            reference = "container:EssentialFeedCacheIntegrationTests/EssentialFeedCacheIntegrationTests.xctestplan">
          </TestPlanReference>
       </TestPlans>
    </TestAction>
