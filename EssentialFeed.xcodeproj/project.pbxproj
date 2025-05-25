@@ -67,6 +67,7 @@
 		FF69449D2DE3A67C00FB5177 /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6944942DE3A67C00FB5177 /* UIControl+TestHelpers.swift */; };
 		FF69449E2DE3A67C00FB5177 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6944952DE3A67C00FB5177 /* UIImage+TestHelpers.swift */; };
 		FF69449F2DE3A67C00FB5177 /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6944962DE3A67C00FB5177 /* UIRefreshControl+TestHelpers.swift */; };
+		FF6944A22DE3A7AA00FB5177 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6944A12DE3A7AA00FB5177 /* FeedPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +185,7 @@
 		FF6944942DE3A67C00FB5177 /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		FF6944952DE3A67C00FB5177 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		FF6944962DE3A67C00FB5177 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
+		FF6944A12DE3A7AA00FB5177 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,6 +487,7 @@
 			children = (
 				FF6944802DE3A67900FB5177 /* FeedImageViewModel.swift */,
 				FF6944812DE3A67900FB5177 /* FeedViewModel.swift */,
+				FF6944A12DE3A7AA00FB5177 /* FeedPresenter.swift */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -767,6 +770,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF6944A22DE3A7AA00FB5177 /* FeedPresenter.swift in Sources */,
 				FF6944872DE3A67900FB5177 /* FeedUIComposer.swift in Sources */,
 				FF6944882DE3A67900FB5177 /* FeedImageCellController.swift in Sources */,
 				FF6944892DE3A67900FB5177 /* FeedRefreshViewController.swift in Sources */,
