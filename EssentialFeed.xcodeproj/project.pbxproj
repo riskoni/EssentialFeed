@@ -683,6 +683,7 @@
 				en,
 				Base,
 				"pt-BR",
+				el,
 			);
 			mainGroup = 971A664D2B25F57500125DAC;
 			productRefGroup = 971A66582B25F57500125DAC /* Products */;
