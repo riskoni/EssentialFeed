@@ -73,6 +73,7 @@
 		FF6944A42DE3B3E600FB5177 /* FeedImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6944A32DE3B3E600FB5177 /* FeedImagePresenter.swift */; };
 		FF6944A62DE3B66700FB5177 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6944A52DE3B66700FB5177 /* FeedViewModel.swift */; };
 		FF6944A82DE3B67A00FB5177 /* FeedLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6944A72DE3B67A00FB5177 /* FeedLoadingViewModel.swift */; };
+		FFF0C5142DE8FED10025B01B /* Feed.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FFF0C5132DE8FED10025B01B /* Feed.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +197,7 @@
 		FF6944A32DE3B3E600FB5177 /* FeedImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenter.swift; sourceTree = "<group>"; };
 		FF6944A52DE3B66700FB5177 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		FF6944A72DE3B67A00FB5177 /* FeedLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoadingViewModel.swift; sourceTree = "<group>"; };
+		FFF0C5132DE8FED10025B01B /* Feed.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Feed.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -503,6 +505,7 @@
 				FF6944A52DE3B66700FB5177 /* FeedViewModel.swift */,
 				FF6944802DE3A67900FB5177 /* FeedImageViewModel.swift */,
 				FF6944A32DE3B3E600FB5177 /* FeedImagePresenter.swift */,
+				FFF0C5132DE8FED10025B01B /* Feed.xcstrings */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -711,6 +714,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF0C5142DE8FED10025B01B /* Feed.xcstrings in Resources */,
 				FF24CD442DE4EBF900347732 /* Feed.storyboard in Resources */,
 				FF24CD462DE4ECAC00347732 /* Feed.xcassets in Resources */,
 			);
@@ -933,6 +937,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -993,6 +998,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
