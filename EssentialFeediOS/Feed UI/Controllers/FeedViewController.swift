@@ -17,7 +17,15 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
 
     private var viewAppeared = false
     var tableModel = [FeedImageCellController]() {
-        didSet { tableView.reloadData() }
+        didSet {
+            if Thread.isMainThread {
+                tableView.reloadData()
+            }else {
+                DispatchQueue.main.async { [weak self] in
+                    self?.tableView.reloadData()
+                }
+            }
+        }
     }
     
     public override func viewDidLoad() {
@@ -40,6 +48,10 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     }
     
     func display(_ viewModel: FeedLoadingViewModel) {
+        if !Thread.isMainThread {
+            return DispatchQueue.main.async { [weak self] in self?.display(viewModel) }
+        }
+        
         if viewModel.isLoading {
             refreshControl?.beginRefreshing()
         } else {
