@@ -15,9 +15,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="pGT-Qn-vv2" customClass="ErrorView" customModule="EssentialFeediOS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="658" width="414" height="16"/>
+                            <rect key="frame" x="0.0" y="658" width="414" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelddd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdw-lQ-Cqf">
+                                    <rect key="frame" x="10" y="0.0" width="394" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="fdw-lQ-Cqf" firstAttribute="top" secondItem="pGT-Qn-vv2" secondAttribute="top" id="4xW-5a-fvV"/>
+                                <constraint firstAttribute="trailing" secondItem="fdw-lQ-Cqf" secondAttribute="trailing" constant="10" id="8wQ-6A-mzZ"/>
+                                <constraint firstItem="fdw-lQ-Cqf" firstAttribute="leading" secondItem="pGT-Qn-vv2" secondAttribute="leading" constant="10" id="cVy-QZ-5cH"/>
+                                <constraint firstAttribute="bottom" secondItem="fdw-lQ-Cqf" secondAttribute="bottom" id="lTm-wO-WKS"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="label" destination="fdw-lQ-Cqf" id="cM1-E1-nye"/>
+                            </connections>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="580" id="4Aa-lg-gTp" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
