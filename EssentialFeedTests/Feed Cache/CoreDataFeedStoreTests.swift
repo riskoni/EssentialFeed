@@ -190,7 +190,7 @@ class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
     }
 }
 
-extension CoreDataFeedStore.ModelNotFound: CustomStringConvertible {
+extension CoreDataFeedStore.ModelNotFound: @retroactive CustomStringConvertible {
     public var description: String {
         "Core Data Model '\(modelName).xcdatamodeld' not found. You need to create it in the production target."
     }
