@@ -8,7 +8,7 @@
 import XCTest
 import EssentialFeed
 
-private struct HTTPTaskWrapper: FeedImageDataLoaderTask {
+private final class HTTPTaskWrapper: FeedImageDataLoaderTask {
     var wrapped: HTTPClientTask?
     private var completion: ((FeedImageDataLoader.Result) -> Void)?
 
@@ -21,7 +21,11 @@ private struct HTTPTaskWrapper: FeedImageDataLoaderTask {
     }
     
     func cancel() {
+        preventFurtherCompletions()
         wrapped?.cancel()
+    }
+    private func preventFurtherCompletions() {
+        completion = nil
     }
     
 }
@@ -39,7 +43,7 @@ class RemoteFeedImageDataLoader {
     
     @discardableResult
     func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> FeedImageDataLoaderTask {
-        var task = HTTPTaskWrapper(completion)
+        let task = HTTPTaskWrapper(completion)
         task.wrapped = client.get(from: url) { [weak self] result in
             guard self != nil else { return }
             
@@ -147,6 +151,20 @@ class RemoteFeedImageDataLoaderTests: XCTestCase {
         XCTAssertEqual(client.cancelledURLs, [url], "Expected cancelled URL request after task is cancelled")
     }
     
+    func test_loadImageDataFromURL_doesNotDeliverResultAfterCancellingTask() {
+        let (sut, client) = makeSUT()
+        let nonEmptyData = Data("non-empty data".utf8)
+        
+        var received = [FeedImageDataLoader.Result]()
+        let task = sut.loadImageData(from: anyURL()) { received.append($0) }
+        task.cancel()
+        
+        client.complete(withStatusCode: 404, data: anyData())
+        client.complete(withStatusCode: 200, data: nonEmptyData)
+        client.complete(with: anyNSError())
+        
+        XCTAssertTrue(received.isEmpty, "Expected no received results after cancelling task")
+    }
     
     //MARK: - Helpers
     
