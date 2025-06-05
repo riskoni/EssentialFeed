@@ -55,7 +55,7 @@
 		FF24CD482DE4F92900347732 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF24CD472DE4F92900347732 /* UITableView+Dequeueing.swift */; };
 		FF24CD4A2DE4F9A300347732 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF24CD492DE4F99D00347732 /* UIImageView+Animations.swift */; };
 		FF342A582DF234DA00553A05 /* RemoteFeedImageDataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF342A572DF234DA00553A05 /* RemoteFeedImageDataLoaderTests.swift */; };
-		FF6944792DE3A66D00FB5177 /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6944772DE3A66D00FB5177 /* FeedImageDataLoader.swift */; };
+		FF342A592DF236F700553A05 /* FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6944772DE3A66D00FB5177 /* FeedImageDataLoader.swift */; };
 		FF6944872DE3A67900FB5177 /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69447A2DE3A67900FB5177 /* FeedUIComposer.swift */; };
 		FF6944882DE3A67900FB5177 /* FeedImageCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69447C2DE3A67900FB5177 /* FeedImageCellController.swift */; };
 		FF69448A2DE3A67900FB5177 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69447E2DE3A67900FB5177 /* FeedViewController.swift */; };
@@ -815,6 +815,7 @@
 				974C42E82BFE43D600BA7100 /* LocalFeedLoader.swift in Sources */,
 				9777FBA62B27BF05004DF1E3 /* HTTPClient.swift in Sources */,
 				971A66702B25F59D00125DAC /* FeedImage.swift in Sources */,
+				FF342A592DF236F700553A05 /* FeedImageDataLoader.swift in Sources */,
 				FF999A292DEBB3FB00CDB1B6 /* FeedViewModel.swift in Sources */,
 				979C10032C020DFA0069A60E /* CoreDataFeedStore.swift in Sources */,
 			);
@@ -864,7 +865,6 @@
 				FF999A102DEA5F6A00CDB1B6 /* WeekRefVirtualProxy.swift in Sources */,
 				FF69448D2DE3A67900FB5177 /* FeedImageCell.swift in Sources */,
 				FF69448E2DE3A67900FB5177 /* UIView+Shimmering.swift in Sources */,
-				FF6944792DE3A66D00FB5177 /* FeedImageDataLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,10 +21,10 @@ class RemoteFeedImageDataLoader {
 }
 
 class RemoteFeedImageDataLoaderTests: XCTestCase {
-
+    
     func test_init_doesNotPerformAnyURLRequest() {
         let (_, client) = makeSUT()
-
+        
         XCTAssertTrue(client.requestedURLs.isEmpty)
     }
     
@@ -46,7 +46,7 @@ class RemoteFeedImageDataLoaderTests: XCTestCase {
         
         XCTAssertEqual(client.requestedURLs, [url, url])
     }
-
+    
     //MARK: - Helpers
     
     private func makeSUT(url: URL = anyURL(), file: StaticString = #file, line: UInt = #line) -> (sut: RemoteFeedImageDataLoader, client: HTTPClientSpy) {
@@ -58,10 +58,18 @@ class RemoteFeedImageDataLoaderTests: XCTestCase {
     }
     
     private class HTTPClientSpy: HTTPClient {
-        var requestedURLs = [URL]()
+        private var messages = [(url: URL, completion: (HTTPClient.Result) -> Void)]()
+        
+        var requestedURLs: [URL] {
+            return messages.map { $0.url }
+        }
         
         func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) {
-            requestedURLs.append(url)
+            messages.append((url, completion))
+        }
+        
+        func complete(with error: Error, at index: Int = 0) {
+            messages[index].completion(.failure(error))
         }
     }
 }
