@@ -19,7 +19,7 @@ class ValidateFeedCacheUseCaseTests: XCTestCase {
     func test_validateCache_deletesCacheOnRetrievalError() {
         let (sut, store) = makeSUT()
         
-        sut.validateCache()
+        sut.validateCache { _ in }
         store.completeRetrieval(with: anyNSError())
      
         XCTAssertEqual(store.receivedMessages, [.retrieve, .deleteCachedFeed])
@@ -27,7 +27,7 @@ class ValidateFeedCacheUseCaseTests: XCTestCase {
     
     func test_validateCache_doesNotDeleteCacheOnEmptyCache() {
         let (sut, store) = makeSUT()
-        sut.validateCache()
+        sut.validateCache { _ in }
         
         store.completeRetrievalWithEmptyCache()
      
@@ -40,7 +40,7 @@ class ValidateFeedCacheUseCaseTests: XCTestCase {
         let nonExpiredTimestamp = fixedCurrentDate.minusFeedCacheMaxAge().adding(seconds: 1)
         let feed = uniqueImageFeed()
         
-        sut.validateCache()
+        sut.validateCache { _ in }
         
         store.completeRetrieval(with: feed.local, timestamp: nonExpiredTimestamp)
      
@@ -53,7 +53,7 @@ class ValidateFeedCacheUseCaseTests: XCTestCase {
         let expirationTimestamp = fixedCurrentDate.minusFeedCacheMaxAge().adding(seconds: -1)
         let feed = uniqueImageFeed()
         
-        sut.validateCache()
+        sut.validateCache { _ in }
 
         store.completeRetrieval(with: feed.local, timestamp: expirationTimestamp)
      
@@ -66,7 +66,7 @@ class ValidateFeedCacheUseCaseTests: XCTestCase {
         let expiredTimestamp = fixedCurrentDate.minusFeedCacheMaxAge()
         let feed = uniqueImageFeed()
         
-        sut.validateCache()
+        sut.validateCache { _ in }
         
         store.completeRetrieval(with: feed.local, timestamp: expiredTimestamp)
      
@@ -77,7 +77,7 @@ class ValidateFeedCacheUseCaseTests: XCTestCase {
         let store = FeedStoreSpy()
         var sut: LocalFeedLoader? = LocalFeedLoader(store: store, currentDate: Date.init)
         
-        sut?.validateCache()
+        sut?.validateCache { _ in }
         
         sut = nil
         store.completeRetrieval(with: anyNSError())
