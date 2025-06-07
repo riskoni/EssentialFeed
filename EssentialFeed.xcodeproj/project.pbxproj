@@ -60,7 +60,7 @@
 		FF3FD6FF2DF4C57B00199E0A /* RemoteFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FD6FE2DF4C57B00199E0A /* RemoteFeedImageDataLoader.swift */; };
 		FF3FD7022DF4CA4D00199E0A /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FD7012DF4CA4D00199E0A /* HTTPURLResponse+StatusCode.swift */; };
 		FF3FD7042DF4CB1400199E0A /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FD7032DF4CB1400199E0A /* URLProtocolStub.swift */; };
-		FF3FD7062DF4CDE400199E0A /* LocalFeedImageDataLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FD7052DF4CDE400199E0A /* LocalFeedImageDataLoaderTests.swift */; };
+		FF3FD7062DF4CDE400199E0A /* LoadFeedImageDataFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FD7052DF4CDE400199E0A /* LoadFeedImageDataFromCacheUseCaseTests.swift */; };
 		FF3FD7082DF4D1A300199E0A /* FeedImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FD7072DF4D1A300199E0A /* FeedImageDataStore.swift */; };
 		FF3FD70A2DF4D1C600199E0A /* LocalFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FD7092DF4D1C600199E0A /* LocalFeedImageDataLoader.swift */; };
 		FF6944872DE3A67900FB5177 /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69447A2DE3A67900FB5177 /* FeedUIComposer.swift */; };
@@ -203,7 +203,7 @@
 		FF3FD6FE2DF4C57B00199E0A /* RemoteFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedImageDataLoader.swift; sourceTree = "<group>"; };
 		FF3FD7012DF4CA4D00199E0A /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		FF3FD7032DF4CB1400199E0A /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
-		FF3FD7052DF4CDE400199E0A /* LocalFeedImageDataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoaderTests.swift; sourceTree = "<group>"; };
+		FF3FD7052DF4CDE400199E0A /* LoadFeedImageDataFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedImageDataFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
 		FF3FD7072DF4D1A300199E0A /* FeedImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataStore.swift; sourceTree = "<group>"; };
 		FF3FD7092DF4D1C600199E0A /* LocalFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoader.swift; sourceTree = "<group>"; };
 		FF6944772DE3A66D00FB5177 /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
@@ -408,7 +408,7 @@
 				9795D6EB2BFE8DAE00650FD7 /* LoadFeedFromCacheUseCaseTests.swift */,
 				97356DDD2BFFE4A0007B2149 /* ValidateFeedCacheUseCaseTests.swift */,
 				979C10072C020F6E0069A60E /* CoreDataFeedStoreTests.swift */,
-				FF3FD7052DF4CDE400199E0A /* LocalFeedImageDataLoaderTests.swift */,
+				FF3FD7052DF4CDE400199E0A /* LoadFeedImageDataFromCacheUseCaseTests.swift */,
 			);
 			path = "Feed Cache";
 			sourceTree = "<group>";
@@ -876,7 +876,7 @@
 				97356DDE2BFFE4A0007B2149 /* ValidateFeedCacheUseCaseTests.swift in Sources */,
 				FF999A2F2DEBB78F00CDB1B6 /* FeedLocalizationTests.swift in Sources */,
 				971A66752B25F7CE00125DAC /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
-				FF3FD7062DF4CDE400199E0A /* LocalFeedImageDataLoaderTests.swift in Sources */,
+				FF3FD7062DF4CDE400199E0A /* LoadFeedImageDataFromCacheUseCaseTests.swift in Sources */,
 				FF3FD6FD2DF4C42A00199E0A /* HTTPClientSpy.swift in Sources */,
 				9777FBAB2B2901A2004DF1E3 /* URLSessionHTTPClientTests.swift in Sources */,
 				979C100D2C0212C00069A60E /* NSManagedObjectContext+Stub.swift in Sources */,
