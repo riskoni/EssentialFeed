@@ -88,6 +88,11 @@ public final class CoreDataFeedStore: FeedStore {
         }
     }
     
+    func perform(_ action: @escaping (NSManagedObjectContext) -> Void) {
+        let context = self.context
+        context.perform { action(context) }
+    }
+    
     private static func saveFeedEntity(feed: [LocalFeedImage], timestamp: Date, in context: NSManagedObjectContext) throws {
         let feedEntity = FeedEntity(context: context)
         feedEntity.timestamp = timestamp
