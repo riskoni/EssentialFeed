@@ -18,7 +18,7 @@ class FeedImagePresenterTests: XCTestCase {
     
     func test_dislaysLoadingImage_onDidStartLoadingImageData() {
         let (sut, view) = makeSUT()
-        let image = uniqueFeed()
+        let image = uniqueImage()
         
         sut.didStartLoadingImageData(for: image)
         
@@ -34,7 +34,7 @@ class FeedImagePresenterTests: XCTestCase {
     func test_dislaysRetry_onFinishLoadingWithError() {
         let (sut, view) = makeSUT()
         let error = anyNSError()
-        let image = uniqueFeed()
+        let image = uniqueImage()
         
         sut.didFinishLoadingImageData(with: error, for: image)
         
@@ -50,7 +50,7 @@ class FeedImagePresenterTests: XCTestCase {
     func test_dislayError_onFailedImageTransformer() {
         let (sut, view) = makeSUT()
         let error = anyNSError()
-        let image = uniqueFeed()
+        let image = uniqueImage()
         
         sut.didFinishLoadingImageData(with: error, for: image)
         
@@ -64,7 +64,7 @@ class FeedImagePresenterTests: XCTestCase {
     }
     
     func test_displaysImage_onSuccessfulTransformation() {
-        let image = uniqueFeed()
+        let image = uniqueImage()
         let data = Data()
         let transformedData = AnyImage()
         let (sut, view) = makeSUT(imageTransformer: { _ in transformedData })

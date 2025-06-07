@@ -57,7 +57,7 @@ final class EssentialFeedCacheIntegrationTests: XCTestCase {
         let imageLoaderToPerformSave = makeImageLoader()
         let imageLoaderToPerformLoad = makeImageLoader()
         let feedLoader = makeFeedLoader()
-        let image = uniqueFeed()
+        let image = uniqueImage()
         let dataToSave = anyData()
         
         save([image], with: feedLoader)
@@ -71,7 +71,7 @@ final class EssentialFeedCacheIntegrationTests: XCTestCase {
         let imageLoaderToPerformLastSave = makeImageLoader()
         let imageLoaderToPerformLoad = makeImageLoader()
         let feedLoader = makeFeedLoader()
-        let image = uniqueFeed()
+        let image = uniqueImage()
         let firstImageData = Data("first".utf8)
         let lastImageData = Data("last".utf8)
         
