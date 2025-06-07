@@ -91,7 +91,7 @@ class FeedImagePresenterTests: XCTestCase {
         trackForMemoryLeaks(sut, file: file, line: line)
         return (sut, view)
     }
-
+   
     private class ViewSpy: FeedImageView {
         var messages = [FeedImageViewModel<AnyImage>]()
 
