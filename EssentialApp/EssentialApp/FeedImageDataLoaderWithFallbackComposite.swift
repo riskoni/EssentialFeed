@@ -10,6 +10,8 @@ import Foundation
 import EssentialFeed
 
 public class FeedImageDataLoaderWithFallbackComposite: FeedImageDataLoader {
+    private let primary: FeedImageDataLoader
+    
     private class Task: FeedImageDataLoaderTask {
         func cancel() {
 
@@ -17,10 +19,11 @@ public class FeedImageDataLoaderWithFallbackComposite: FeedImageDataLoader {
     }
 
     public init(primary: FeedImageDataLoader, fallback: FeedImageDataLoader) {
-
+        self.primary = primary
     }
-
+    
     public func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> FeedImageDataLoaderTask {
+        _ = primary.loadImageData(from: url) { _ in }
         return Task()
     }
 }
