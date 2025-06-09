@@ -31,8 +31,8 @@ public class FeedImageDataLoaderWithFallbackComposite: FeedImageDataLoader {
         task.wrapped = primary.loadImageData(from: url) { [weak self] result in
             switch result {
             case .success:
-                break
-                
+                completion(result)
+
             case .failure:
                 task.wrapped = self?.fallback.loadImageData(from: url) { _ in }
             }
