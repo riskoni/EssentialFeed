@@ -17,6 +17,7 @@
 		0895DAAD234B3F7E0031BB2D /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0895DAAA234B3F7E0031BB2D /* EssentialFeediOS.framework */; };
 		0895DAAE234B3F7E0031BB2D /* EssentialFeediOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0895DAAA234B3F7E0031BB2D /* EssentialFeediOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FFA3FB262DF7731700DEC1A8 /* FeedLoaderWithFallbackCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3FB242DF7731700DEC1A8 /* FeedLoaderWithFallbackCompositeTests.swift */; };
+		FFA3FB282DF77D3100DEC1A8 /* FeedLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3FB272DF77D3100DEC1A8 /* FeedLoaderWithFallbackComposite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		0895DAAA234B3F7E0031BB2D /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA3FB1B2DF7730C00DEC1A8 /* EssentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA3FB242DF7731700DEC1A8 /* FeedLoaderWithFallbackCompositeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackCompositeTests.swift; sourceTree = "<group>"; };
+		FFA3FB272DF77D3100DEC1A8 /* FeedLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		0895DA85234B3B950031BB2D /* EssentialApp */ = {
 			isa = PBXGroup;
 			children = (
+				FFA3FB272DF77D3100DEC1A8 /* FeedLoaderWithFallbackComposite.swift */,
 				0895DA86234B3B950031BB2D /* AppDelegate.swift */,
 				0895DA88234B3B950031BB2D /* SceneDelegate.swift */,
 				0895DA8C234B3B950031BB2D /* Main.storyboard */,
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0895DA87234B3B950031BB2D /* AppDelegate.swift in Sources */,
+				FFA3FB282DF77D3100DEC1A8 /* FeedLoaderWithFallbackComposite.swift in Sources */,
 				0895DA89234B3B950031BB2D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
