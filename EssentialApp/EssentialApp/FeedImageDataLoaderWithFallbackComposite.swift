@@ -13,9 +13,11 @@ public class FeedImageDataLoaderWithFallbackComposite: FeedImageDataLoader {
     private let primary: FeedImageDataLoader
     private let fallback: FeedImageDataLoader
 
-    private class Task: FeedImageDataLoaderTask {
+    private class TaskWrapper: FeedImageDataLoaderTask {
+        var wrapped: FeedImageDataLoaderTask?
+        
         func cancel() {
-
+            wrapped?.cancel()
         }
     }
 
@@ -25,7 +27,7 @@ public class FeedImageDataLoaderWithFallbackComposite: FeedImageDataLoader {
     }
     
     public func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> FeedImageDataLoaderTask {
-        _ = primary.loadImageData(from: url) { [weak self] result in
+        let task = primary.loadImageData(from: url) { [weak self] result in
             switch result {
             case .success:
                 break
@@ -34,6 +36,6 @@ public class FeedImageDataLoaderWithFallbackComposite: FeedImageDataLoader {
                 _ = self?.fallback.loadImageData(from: url) { _ in }
             }
         }
-        return Task()
+        return task
     }
 }
