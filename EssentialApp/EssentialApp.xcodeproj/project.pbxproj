@@ -149,9 +149,9 @@
 		FFA3FB302DF782E900DEC1A8 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FFA3FB312DF782F600DEC1A8 /* SharedTestHelpers.swift */,
 				FF05EE562DF8C85100E7711D /* FeedLoaderStub.swift */,
 				FFA3FB2E2DF7828C00DEC1A8 /* XCTestCase+MemoryLeakTracking.swift */,
-				FFA3FB312DF782F600DEC1A8 /* SharedTestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
