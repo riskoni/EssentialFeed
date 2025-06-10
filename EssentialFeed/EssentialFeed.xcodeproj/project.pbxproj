@@ -49,6 +49,7 @@
 		97F224382BFBDB5700B656FF /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971A66572B25F57500125DAC /* EssentialFeed.framework */; };
 		97F2243E2BFBE24000B656FF /* XCTTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A592892BFA92D700ED59CA /* XCTTestCase+MemoryLeakTracking.swift */; };
 		FF05EE5B2DF8CD8900E7711D /* FeedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05EE5A2DF8CD8900E7711D /* FeedCache.swift */; };
+		FF05EE652DF8D53100E7711D /* FeedImageDataCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF05EE642DF8D53100E7711D /* FeedImageDataCache.swift */; };
 		FF24CD442DE4EBF900347732 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF24CD432DE4EBF900347732 /* Feed.storyboard */; };
 		FF24CD462DE4ECAC00347732 /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF24CD452DE4ECAC00347732 /* Feed.xcassets */; };
 		FF24CD482DE4F92900347732 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF24CD472DE4F92900347732 /* UITableView+Dequeueing.swift */; };
@@ -201,6 +202,7 @@
 		97F57F9C2C07CDE300EEAA7F /* CI_macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI_macOS.xctestplan; sourceTree = "<group>"; };
 		97F57F9D2C07CE2A00EEAA7F /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = CI_iOS.xctestplan; path = ../CI_iOS.xctestplan; sourceTree = "<group>"; };
 		FF05EE5A2DF8CD8900E7711D /* FeedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCache.swift; sourceTree = "<group>"; };
+		FF05EE642DF8D53100E7711D /* FeedImageDataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataCache.swift; sourceTree = "<group>"; };
 		FF24CD432DE4EBF900347732 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		FF24CD452DE4ECAC00347732 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 		FF24CD472DE4F92900347732 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 		971A66732B25F6F600125DAC /* Feed Feature */ = {
 			isa = PBXGroup;
 			children = (
+				FF05EE642DF8D53100E7711D /* FeedImageDataCache.swift */,
 				FF6944772DE3A66D00FB5177 /* FeedImageDataLoader.swift */,
 				971A666F2B25F59D00125DAC /* FeedImage.swift */,
 				971A66712B25F65B00125DAC /* FeedLoader.swift */,
@@ -884,6 +887,7 @@
 				FF3FD73F2DF4E96700199E0A /* FeedImageEntity.swift in Sources */,
 				FF999A2D2DEBB41200CDB1B6 /* FeedErrorViewModel.swift in Sources */,
 				97A5928C2BFAA2DE00ED59CA /* URLSessionHttpClient.swift in Sources */,
+				FF05EE652DF8D53100E7711D /* FeedImageDataCache.swift in Sources */,
 				FF999A2B2DEBB40800CDB1B6 /* FeedLoadingViewModel.swift in Sources */,
 				FF3FD6FF2DF4C57B00199E0A /* RemoteFeedImageDataLoader.swift in Sources */,
 				FF999A262DEBB26F00CDB1B6 /* FeedPresenter.swift in Sources */,
