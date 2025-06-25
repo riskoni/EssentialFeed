@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -130,10 +130,6 @@
 		FFD7B2862E0B414A00946B29 /* DebuggingSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingSceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		FFD7B27C2E0B362900946B29 /* EssentialAppUIAcceptanceTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = EssentialAppUIAcceptanceTests; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
 		0895DA80234B3B950031BB2D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -166,7 +162,6 @@
 			children = (
 				0895DA85234B3B950031BB2D /* EssentialApp */,
 				FFA3FB252DF7731700DEC1A8 /* EssentialAppTests */,
-				FFD7B27C2E0B362900946B29 /* EssentialAppUIAcceptanceTests */,
 				0895DA84234B3B950031BB2D /* Products */,
 				0895DAA8234B3F7E0031BB2D /* Frameworks */,
 			);
@@ -305,9 +300,6 @@
 			);
 			dependencies = (
 				FFD7B2822E0B362900946B29 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				FFD7B27C2E0B362900946B29 /* EssentialAppUIAcceptanceTests */,
 			);
 			name = EssentialAppUIAcceptanceTests;
 			packageProductDependencies = (
