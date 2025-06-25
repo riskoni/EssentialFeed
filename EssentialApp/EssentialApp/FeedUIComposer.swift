@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import Foundation
 import EssentialFeed
+import EssentialFeediOS
 
 public final class FeedUIComposer {
     private init() {}
