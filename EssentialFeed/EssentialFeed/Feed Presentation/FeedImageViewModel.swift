@@ -4,6 +4,7 @@
 //
 //  Created by Nikolay Riskov on 1.06.25.
 //
+import Foundation
 
 public struct FeedImageViewModel<Image> {
     public let description: String?

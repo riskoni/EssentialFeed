@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -70,6 +70,9 @@
 		FF3FD7412DF4EC5600199E0A /* CoreDataFeedStore+FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FD7402DF4EC5600199E0A /* CoreDataFeedStore+FeedStore.swift */; };
 		FF3FD7432DF4ED3F00199E0A /* FeedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FD7422DF4ED3F00199E0A /* FeedEntity.swift */; };
 		FF65CC172E0DD8F400946C18 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9723E7EF2C07CB43001051A8 /* EssentialFeediOS.framework */; };
+		FF65CC292E0DDA8300946C18 /* EMPTY_FEED.png in Resources */ = {isa = PBXBuildFile; fileRef = FF65CC242E0DDA8300946C18 /* EMPTY_FEED.png */; };
+		FF65CC2A2E0DDA8300946C18 /* FeedSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65CC262E0DDA8300946C18 /* FeedSnapshotTests.swift */; };
+		FF65CC2B2E0DDA8300946C18 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65CC272E0DDA8300946C18 /* UIImage+TestHelpers.swift */; };
 		FF6944882DE3A67900FB5177 /* FeedImageCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69447C2DE3A67900FB5177 /* FeedImageCellController.swift */; };
 		FF69448A2DE3A67900FB5177 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF69447E2DE3A67900FB5177 /* FeedViewController.swift */; };
 		FF69448D2DE3A67900FB5177 /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6944832DE3A67900FB5177 /* FeedImageCell.swift */; };
@@ -206,6 +209,9 @@
 		FF3FD7402DF4EC5600199E0A /* CoreDataFeedStore+FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedStore+FeedStore.swift"; sourceTree = "<group>"; };
 		FF3FD7422DF4ED3F00199E0A /* FeedEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEntity.swift; sourceTree = "<group>"; };
 		FF65CC132E0DD8F400946C18 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF65CC242E0DDA8300946C18 /* EMPTY_FEED.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EMPTY_FEED.png; sourceTree = "<group>"; };
+		FF65CC262E0DDA8300946C18 /* FeedSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSnapshotTests.swift; sourceTree = "<group>"; };
+		FF65CC272E0DDA8300946C18 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		FF6944772DE3A66D00FB5177 /* FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoader.swift; sourceTree = "<group>"; };
 		FF69447C2DE3A67900FB5177 /* FeedImageCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCellController.swift; sourceTree = "<group>"; };
 		FF69447E2DE3A67900FB5177 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -224,10 +230,6 @@
 		FF999A362DECF88500CDB1B6 /* FeedImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenter.swift; sourceTree = "<group>"; };
 		FFF0C5182DE907950025B01B /* FeedLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLocalizationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		FF65CC142E0DD8F400946C18 /* EssentialFeediOSTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = EssentialFeediOSTests; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		971A66542B25F57500125DAC /* Frameworks */ = {
@@ -291,7 +293,7 @@
 				97F224352BFBDB5700B656FF /* EssentialFeedAPIEndToEndTests */,
 				979C0FF82C020AE30069A60E /* EssentialFeedCacheIntegrationTests */,
 				9723E7F02C07CB43001051A8 /* EssentialFeediOS */,
-				FF65CC142E0DD8F400946C18 /* EssentialFeediOSTests */,
+				FF65CC282E0DDA8300946C18 /* EssentialFeediOSTests */,
 				971A66582B25F57500125DAC /* Products */,
 				97A882F32C09199700397A0D /* Frameworks */,
 			);
@@ -495,6 +497,32 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		FF65CC252E0DDA8300946C18 /* snapshots */ = {
+			isa = PBXGroup;
+			children = (
+				FF65CC242E0DDA8300946C18 /* EMPTY_FEED.png */,
+			);
+			path = snapshots;
+			sourceTree = "<group>";
+		};
+		FF65CC282E0DDA8300946C18 /* EssentialFeediOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF65CC2C2E0DDA8700946C18 /* Helpers */,
+				FF65CC252E0DDA8300946C18 /* snapshots */,
+				FF65CC262E0DDA8300946C18 /* FeedSnapshotTests.swift */,
+			);
+			path = EssentialFeediOSTests;
+			sourceTree = "<group>";
+		};
+		FF65CC2C2E0DDA8700946C18 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FF65CC272E0DDA8300946C18 /* UIImage+TestHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		FF69447F2DE3A67900FB5177 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -685,9 +713,6 @@
 			dependencies = (
 				FF65CC192E0DD8F400946C18 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				FF65CC142E0DD8F400946C18 /* EssentialFeediOSTests */,
-			);
 			name = EssentialFeediOSTests;
 			packageProductDependencies = (
 			);
@@ -795,6 +820,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF65CC292E0DDA8300946C18 /* EMPTY_FEED.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -910,6 +936,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF65CC2A2E0DDA8300946C18 /* FeedSnapshotTests.swift in Sources */,
+				FF65CC2B2E0DDA8300946C18 /* UIImage+TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
