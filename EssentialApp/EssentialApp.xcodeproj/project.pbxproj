@@ -35,6 +35,7 @@
 		FF65CC0B2E0C89C400946C18 /* FeedAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65CC0A2E0C89C400946C18 /* FeedAcceptanceTests.swift */; };
 		FFA3FB2F2DF7828C00DEC1A8 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3FB2E2DF7828C00DEC1A8 /* XCTestCase+MemoryLeakTracking.swift */; };
 		FFA3FB322DF782F600DEC1A8 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA3FB312DF782F600DEC1A8 /* SharedTestHelpers.swift */; };
+		FFFDF9982E108915008EFC9E /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFDF9972E108915008EFC9E /* CombineHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		FFA3FB2E2DF7828C00DEC1A8 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		FFA3FB312DF782F600DEC1A8 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		FFD7B27B2E0B362900946B29 /* EssentialAppUIAcceptanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppUIAcceptanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFFDF9972E108915008EFC9E /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				0895DA8F234B3B970031BB2D /* Assets.xcassets */,
 				0895DA91234B3B970031BB2D /* LaunchScreen.storyboard */,
 				0895DA94234B3B970031BB2D /* Info.plist */,
+				FFFDF9972E108915008EFC9E /* CombineHelpers.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				FF65CBF42E0C83FF00946C18 /* FeedLoaderPresentationAdapter.swift in Sources */,
 				FF65CBF52E0C83FF00946C18 /* FeedViewAdapter.swift in Sources */,
 				0895DA89234B3B950031BB2D /* SceneDelegate.swift in Sources */,
+				FFFDF9982E108915008EFC9E /* CombineHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
