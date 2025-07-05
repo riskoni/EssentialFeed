@@ -297,8 +297,6 @@
 		971A664D2B25F57500125DAC = {
 			isa = PBXGroup;
 			children = (
-				FF7A8E342E17094900DB9DBE /* Shared Api Infra */,
-				FF7A8E332E17091C00DB9DBE /* Shared Api */,
 				97F57F9C2C07CDE300EEAA7F /* CI_macOS.xctestplan */,
 				97F57F9D2C07CE2A00EEAA7F /* CI_iOS.xctestplan */,
 				97F2242F2BFBD7B200B656FF /* EssentialFeed.xctestplan */,
@@ -329,6 +327,8 @@
 		971A66592B25F57500125DAC /* EssentialFeed */ = {
 			isa = PBXGroup;
 			children = (
+				FF7A8E332E17091C00DB9DBE /* Shared Api */,
+				FF7A8E342E17094900DB9DBE /* Shared Api Infra */,
 				FF10DAE52E19BE0B00F1C121 /* Shared Presentation */,
 				974C42E62BFE43C800BA7100 /* Feed Cache */,
 				971A66762B26042F00125DAC /* Feed API */,
