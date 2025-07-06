@@ -1,25 +1,25 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "FEED_VIEW_TITLE" : {
-      "extractionState" : "manual",
+    "GENERIC_CONNECTION_ERROR" : {
+      "comment" : "Error message displayed when we can't load resource from the server\nError message displayed when we can't load the image feed from the server",
       "localizations" : {
         "el" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "To Feed µou"
+            "value" : "Δεν ήταν δυνατή η σύνδεση στο διακομιστή"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "My Feed"
+            "value" : "Couldn't connect to server"
           }
         },
         "pt-BR" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Meu Feed"
+            "value" : "Não foi possível conectar com o servidor"
           }
         }
       }
