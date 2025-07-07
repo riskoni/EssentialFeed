@@ -70,6 +70,9 @@
 		FF3FD73F2DF4E96700199E0A /* FeedImageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FD73E2DF4E96700199E0A /* FeedImageEntity.swift */; };
 		FF3FD7412DF4EC5600199E0A /* CoreDataFeedStore+FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FD7402DF4EC5600199E0A /* CoreDataFeedStore+FeedStore.swift */; };
 		FF3FD7432DF4ED3F00199E0A /* FeedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3FD7422DF4ED3F00199E0A /* FeedEntity.swift */; };
+		FF4E64AD2E1C5F37007EF96F /* SharedLocalizationTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4E64AC2E1C5F37007EF96F /* SharedLocalizationTestHelpers.swift */; };
+		FF4E64AE2E1C5F37007EF96F /* SharedLocalizationTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4E64AC2E1C5F37007EF96F /* SharedLocalizationTestHelpers.swift */; };
+		FF4E64AF2E1C5F37007EF96F /* SharedLocalizationTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4E64AC2E1C5F37007EF96F /* SharedLocalizationTestHelpers.swift */; };
 		FF65CC172E0DD8F400946C18 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9723E7EF2C07CB43001051A8 /* EssentialFeediOS.framework */; };
 		FF65CC2A2E0DDA8300946C18 /* FeedSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65CC262E0DDA8300946C18 /* FeedSnapshotTests.swift */; };
 		FF65CC2B2E0DDA8300946C18 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65CC272E0DDA8300946C18 /* UIImage+TestHelpers.swift */; };
@@ -215,6 +218,7 @@
 		FF3FD73E2DF4E96700199E0A /* FeedImageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageEntity.swift; sourceTree = "<group>"; };
 		FF3FD7402DF4EC5600199E0A /* CoreDataFeedStore+FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedStore+FeedStore.swift"; sourceTree = "<group>"; };
 		FF3FD7422DF4ED3F00199E0A /* FeedEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEntity.swift; sourceTree = "<group>"; };
+		FF4E64AC2E1C5F37007EF96F /* SharedLocalizationTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedLocalizationTestHelpers.swift; sourceTree = "<group>"; };
 		FF65CC132E0DD8F400946C18 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF65CC262E0DDA8300946C18 /* FeedSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSnapshotTests.swift; sourceTree = "<group>"; };
 		FF65CC272E0DDA8300946C18 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
@@ -456,6 +460,7 @@
 			children = (
 				97A592892BFA92D700ED59CA /* XCTTestCase+MemoryLeakTracking.swift */,
 				97356DE12BFFE897007B2149 /* SharedTestHelpers.swift */,
+				FF4E64AC2E1C5F37007EF96F /* SharedLocalizationTestHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -985,6 +990,7 @@
 				9777FBAB2B2901A2004DF1E3 /* URLSessionHTTPClientTests.swift in Sources */,
 				979C100D2C0212C00069A60E /* NSManagedObjectContext+Stub.swift in Sources */,
 				9705C19C2C0259610049ECC7 /* NSEntityDescription+Assertions.swift in Sources */,
+				FF4E64AF2E1C5F37007EF96F /* SharedLocalizationTestHelpers.swift in Sources */,
 				9795D6EF2BFE8EEB00650FD7 /* FeedStoreSpy.swift in Sources */,
 				FF10DAE42E19BB4100F1C121 /* LoadResourcePresenterTests.swift in Sources */,
 				FF3FD7102DF4D7A400199E0A /* CoreDataFeedImageDataStoreTests.swift in Sources */,
@@ -1019,6 +1025,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				977617E42C05275000AEBB51 /* SharedTestHelpers.swift in Sources */,
+				FF4E64AD2E1C5F37007EF96F /* SharedLocalizationTestHelpers.swift in Sources */,
 				977617E22C051FED00AEBB51 /* XCTTestCase+MemoryLeakTracking.swift in Sources */,
 				977617E32C05273800AEBB51 /* FeedCacheTestHelpers.swift in Sources */,
 				979C0FFA2C020AE30069A60E /* EssentialFeedCacheIntegrationTests.swift in Sources */,
@@ -1030,6 +1037,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97F2243E2BFBE24000B656FF /* XCTTestCase+MemoryLeakTracking.swift in Sources */,
+				FF4E64AE2E1C5F37007EF96F /* SharedLocalizationTestHelpers.swift in Sources */,
 				97F224372BFBDB5700B656FF /* EssentialFeedAPIEndToEndTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
