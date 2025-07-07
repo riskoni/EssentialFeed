@@ -43,12 +43,12 @@ public final class LoadResourcePresenter<Resource, View: ResourceView> {
         do {
             resourceView.display(try mapper(resource))
         } catch {
-            didFinsihLoading(with: error)
+            didFinishLoading(with: error)
         }
         loadingView.display(ResourceLoadingViewModel(isLoading: false))
     }
     
-    public func didFinsihLoading(with error: Error) {
+    public func didFinishLoading(with error: Error) {
         errorView.display(ResourceErrorViewModel.error(message: Self.loadError))
         loadingView.display(ResourceLoadingViewModel(isLoading: false))
     }
