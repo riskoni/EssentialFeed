@@ -36,7 +36,7 @@ final class FeedUIIntergrationTests: XCTestCase {
         XCTAssertEqual(sut.errorMessage, nil)
         
         loader.completeFeedLoadingWithError(at: 0)
-        XCTAssertEqual(sut.errorMessage, feedTitle)
+        XCTAssertEqual(sut.errorMessage, loadError)
     }
     
     func test_loadFeedCompletion_rendersErrorMessageOnErrorUntilNextReload() {
