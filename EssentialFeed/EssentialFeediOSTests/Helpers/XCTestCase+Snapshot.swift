@@ -39,6 +39,7 @@ extension XCTestCase {
             )
             
             try snapshotData?.write(to: snapshotURL)
+            XCTFail("Recording succeded. Use `assert` to compare new snapshot with stored snapshot.")
         } catch {
             XCTFail("Failed to record snapshot with error: \(error)", file: file, line: line)
         }
