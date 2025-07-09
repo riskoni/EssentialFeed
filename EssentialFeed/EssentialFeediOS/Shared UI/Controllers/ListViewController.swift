@@ -25,6 +25,7 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
     public override func viewDidLoad() {
         super.viewDidLoad()
         configureErrorView()
+        configureTraitCollectionObservers()
         refresh();
     }
     
@@ -56,6 +57,16 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
         if !viewAppeared {
             viewAppeared = true
             refreshControl?.beginRefreshing()
+        }
+    }
+    
+    private func configureTraitCollectionObservers() {
+        if #available(iOS 17.0, *) {
+            registerForTraitChanges(
+                [UITraitPreferredContentSizeCategory.self]
+            ) { (self: Self, previous: UITraitCollection) in
+                self.tableView.reloadData()
+            }
         }
     }
     
