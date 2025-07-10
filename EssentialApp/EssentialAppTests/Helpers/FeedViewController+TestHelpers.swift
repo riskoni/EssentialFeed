@@ -44,6 +44,17 @@ extension ListViewController {
         ds?.tableView?(tableView, cancelPrefetchingForRowsAt: [index])
     }
     
+    @discardableResult
+    func simulateFeedImageBecomingVisibleAgain(at row: Int) -> FeedImageCell? {
+        let view = simulateFeedImageViewNotVisible(at: row)
+        
+        let delegate = tableView.delegate
+        let index = IndexPath(row: row, section: feedImagesSection)
+        delegate?.tableView?(tableView, willDisplay: view!, forRowAt: index)
+        
+        return view
+    }
+    
     var isShowingLoadingIndicator: Bool {
         return refreshControl?.isRefreshing == true
     }
@@ -61,7 +72,7 @@ extension ListViewController {
     }
     
     func numberOfRenderedFeedImageViews() -> Int {
-        return tableView.numberOfRows(inSection: feedImagesSection)
+        return tableView.numberOfSections == 0 ? 0 : tableView.numberOfRows(inSection: feedImagesSection)
     }
     
     func feedImageView(at row: Int) -> UITableViewCell? {
@@ -78,6 +89,8 @@ extension ListViewController {
     }
     
     func simulateAppearance() {
+        tableView.frame = CGRect(x: 0, y: 0, width: 1, height: 1)
+
         if !isViewLoaded {
             loadViewIfNeeded()
             prepareForFirstAppearance()

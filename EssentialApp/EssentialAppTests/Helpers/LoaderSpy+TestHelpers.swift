@@ -63,7 +63,9 @@ extension FeedUIIntergrationTests {
         }
         
         func completeImageLoading(with imageData: Data = Data(), at index: Int = 0) {
-            imageRequests[index].completion(.success(imageData))
+            if( index < imageRequests.count){
+                imageRequests[index].completion(.success(imageData))
+            }
         }
         
         func completeImageLoadingWithError(at index: Int = 0) {
