@@ -13,7 +13,7 @@ import EssentialApp
 import EssentialFeed
 import EssentialFeediOS
 
-final class CommentsUIIntergationTests: FeedUIIntergrationTests {
+final class CommentsUIIntergationTests: XCTestCase {
     
     func test_commentsView_hasTitle() {
         let (sut, _) = makeSUT()
@@ -113,26 +113,7 @@ final class CommentsUIIntergationTests: FeedUIIntergrationTests {
         wait(for: [exp], timeout: 1.0)
     }
     
-    
-    override func test_errorView_doesNotRenderErrorOnLoad() {
-        let (sut, _) = makeSUT()
-        
-        sut.simulateAppearance()
-        
-        XCTAssertEqual(sut.errorMessage, nil)
-    }
-    
-    override func test_loadFeedCompletion_rendersErrorMessageOnError() {
-        let (sut, loader) = makeSUT()
-        
-        sut.simulateAppearance()
-        XCTAssertEqual(sut.errorMessage, nil)
-        
-        loader.completeCommentsLoadingWithError(at: 0)
-        XCTAssertEqual(sut.errorMessage, loadError)
-    }
-    
-    override func test_loadFeedCompletion_rendersErrorMessageOnErrorUntilNextReload() {
+    func test_loadCommentsCompletion_rendersErrorMessageOnErrorUntilNextReload() {
         let (sut, loader) = makeSUT()
         
         sut.simulateAppearance()
@@ -145,7 +126,7 @@ final class CommentsUIIntergationTests: FeedUIIntergrationTests {
         XCTAssertEqual(sut.errorMessage, nil)
     }
     
-    override func test_tapOnErrorView_hidesErrorMessage() {
+    func test_tapOnErrorView_hidesErrorMessage() {
         let (sut, loader) = makeSUT()
         
         sut.simulateAppearance()
@@ -157,8 +138,6 @@ final class CommentsUIIntergationTests: FeedUIIntergrationTests {
         sut.simulateErrorViewTap()
         XCTAssertEqual(sut.errorMessage, nil)
     }
-    
-    
     
     //MARK: - Helpers
     
