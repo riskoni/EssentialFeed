@@ -69,7 +69,7 @@ class LoadResourcePresenterTests: XCTestCase {
     
     private typealias SUT = LoadResourcePresenter<String, ViewSpy>
     
-    private func makeSUT(mapper: @escaping LoadResourcePresenter<String, ViewSpy>.Mapper = { _ in "any"}, file: StaticString = #file, line: UInt = #line) -> (sut: SUT, view: ViewSpy) {
+    private func makeSUT(mapper: @escaping LoadResourcePresenter<String, ViewSpy>.Mapper = { _ in "any"}, file: StaticString = #filePath, line: UInt = #line) -> (sut: SUT, view: ViewSpy) {
         let view = ViewSpy()
         let sut = LoadResourcePresenter(resourceView: view, loadingView: view, errorView: view, mapper: mapper)
         trackForMemoryLeaks(view, file: file, line: line)
@@ -77,7 +77,7 @@ class LoadResourcePresenterTests: XCTestCase {
         return (sut, view)
     }
     
-    private func localized(_ key: String, file: StaticString = #file, line: UInt = #line) -> String {
+    private func localized(_ key: String, file: StaticString = #filePath, line: UInt = #line) -> String {
         let table = "Shared"
         let bundle = Bundle(for: FeedPresenter.self)
         let value = bundle.localizedString(forKey: key, value: nil, table: table)
