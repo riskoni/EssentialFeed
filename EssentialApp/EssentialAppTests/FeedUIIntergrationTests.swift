@@ -74,13 +74,13 @@ class FeedUIIntergrationTests: XCTestCase {
         let (sut, loader) = makeSUT()
 
         sut.simulateAppearance()
-//        XCTAssertEqual(sut.isShowingLoadingIndicator, true, "Expected loading indicator once view is loaded")
+        XCTAssertEqual(sut.isShowingLoadingIndicator, true, "Expected loading indicator once view is loaded")
         
         loader.completeFeedLoading(at: 0)
         XCTAssertEqual(sut.isShowingLoadingIndicator, false, "Expected no loading indicator once loading completes successfully")
 
         sut.simulateUserInitiatedReload()
-//        XCTAssertEqual(sut.isShowingLoadingIndicator, true, "Expected loading indicator once user performs a refresh action")
+        XCTAssertEqual(sut.isShowingLoadingIndicator, true, "Expected loading indicator once user performs a refresh action")
 
         loader.completeFeedLoadingWithError(at: 1)
         XCTAssertEqual(sut.isShowingLoadingIndicator, false, "Expected no loading indicator once user initiated loading completes with error")
@@ -106,8 +106,6 @@ class FeedUIIntergrationTests: XCTestCase {
         sut.simulateUserInitiatedReload()
         loader.completeFeedLoading(with: [image0, image1, image2, image3], at: 1)
         assertThat(sut, isRendering: [image0, image1, image2, image3])
-        
-        RunLoop.current.run(until: Date()+1)
     }
     
     func test_tapOnErrorView_hidesErrorMessage() {
@@ -148,8 +146,6 @@ class FeedUIIntergrationTests: XCTestCase {
         sut.simulateUserInitiatedReload()
         loader.completeFeedLoadingWithError(at: 1)
         assertThat(sut, isRendering: [image0])
-        
-        RunLoop.current.run(until: Date()+1)
     }
     
     func test_feedImageView_loadsImageURLWhenVisible() {
