@@ -116,6 +116,7 @@
 		FFFDB6932E22872900AAECE8 /* FeedEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFDB6922E22872900AAECE8 /* FeedEndpoint.swift */; };
 		FFFDB6952E228CFC00AAECE8 /* LoadMoreCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFDB6942E228CFC00AAECE8 /* LoadMoreCellController.swift */; };
 		FFFDB6972E228D1300AAECE8 /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFDB6962E228D1300AAECE8 /* LoadMoreCell.swift */; };
+		FFFDB6A32E228F5400AAECE8 /* Paginated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFDB6A22E228F5400AAECE8 /* Paginated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -282,6 +283,7 @@
 		FFFDB6922E22872900AAECE8 /* FeedEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEndpoint.swift; sourceTree = "<group>"; };
 		FFFDB6942E228CFC00AAECE8 /* LoadMoreCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreCellController.swift; sourceTree = "<group>"; };
 		FFFDB6962E228D1300AAECE8 /* LoadMoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
+		FFFDB6A22E228F5400AAECE8 /* Paginated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -641,6 +643,7 @@
 			isa = PBXGroup;
 			children = (
 				9777FBA52B27BF05004DF1E3 /* HTTPClient.swift */,
+				FFFDB6A22E228F5400AAECE8 /* Paginated.swift */,
 			);
 			path = "Shared Api";
 			sourceTree = "<group>";
@@ -1101,6 +1104,7 @@
 				FF4E64B42E1C6114007EF96F /* ResourceErrorView.swift in Sources */,
 				FF3FD7022DF4CA4D00199E0A /* HTTPURLResponse+StatusCode.swift in Sources */,
 				FF3FD7432DF4ED3F00199E0A /* FeedEntity.swift in Sources */,
+				FFFDB6A32E228F5400AAECE8 /* Paginated.swift in Sources */,
 				97356DE42BFFF003007B2149 /* FeedCachePolicy.swift in Sources */,
 				FF3FD7412DF4EC5600199E0A /* CoreDataFeedStore+FeedStore.swift in Sources */,
 				FF9B5D4A2E116094005E10FE /* ImageComment.swift in Sources */,
