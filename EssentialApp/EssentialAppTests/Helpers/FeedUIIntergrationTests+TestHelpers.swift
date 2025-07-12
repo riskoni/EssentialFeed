@@ -1,5 +1,5 @@
 //
-//  LoaderSpy+TestHelpers.swift
+//  FeedUIIntergrationTests+TestHelpers.swift
 //  EssentialFeed
 //
 //  Created by Nikolay Riskov on 25.05.25.

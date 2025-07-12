@@ -22,7 +22,7 @@
 		FF65CBF42E0C83FF00946C18 /* LoadResourcePresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65CBEE2E0C83FF00946C18 /* LoadResourcePresentationAdapter.swift */; };
 		FF65CBF52E0C83FF00946C18 /* FeedViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65CBED2E0C83FF00946C18 /* FeedViewAdapter.swift */; };
 		FF65CBFF2E0C84D900946C18 /* ListViewController+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65CBF72E0C84D900946C18 /* ListViewController+TestHelpers.swift */; };
-		FF65CC002E0C84D900946C18 /* LoaderSpy+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65CBF92E0C84D900946C18 /* LoaderSpy+TestHelpers.swift */; };
+		FF65CC002E0C84D900946C18 /* FeedUIIntergrationTests+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65CBF92E0C84D900946C18 /* FeedUIIntergrationTests+TestHelpers.swift */; };
 		FF65CC012E0C84D900946C18 /* UIButton+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65CBFA2E0C84D900946C18 /* UIButton+TestHelpers.swift */; };
 		FF65CC022E0C84D900946C18 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65CBFC2E0C84D900946C18 /* UIImage+TestHelpers.swift */; };
 		FF65CC032E0C84D900946C18 /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF65CBFD2E0C84D900946C18 /* UIRefreshControl+TestHelpers.swift */; };
@@ -88,7 +88,7 @@
 		FF65CBF62E0C84D900946C18 /* FeedImageCell+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedImageCell+TestHelpers.swift"; sourceTree = "<group>"; };
 		FF65CBF72E0C84D900946C18 /* ListViewController+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListViewController+TestHelpers.swift"; sourceTree = "<group>"; };
 		FF65CBF82E0C84D900946C18 /* FeedViewControlleTests+Assertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControlleTests+Assertions.swift"; sourceTree = "<group>"; };
-		FF65CBF92E0C84D900946C18 /* LoaderSpy+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoaderSpy+TestHelpers.swift"; sourceTree = "<group>"; };
+		FF65CBF92E0C84D900946C18 /* FeedUIIntergrationTests+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedUIIntergrationTests+TestHelpers.swift"; sourceTree = "<group>"; };
 		FF65CBFA2E0C84D900946C18 /* UIButton+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TestHelpers.swift"; sourceTree = "<group>"; };
 		FF65CBFB2E0C84D900946C18 /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		FF65CBFC2E0C84D900946C18 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 				FF65CBF62E0C84D900946C18 /* FeedImageCell+TestHelpers.swift */,
 				FF65CBF72E0C84D900946C18 /* ListViewController+TestHelpers.swift */,
 				FF65CBF82E0C84D900946C18 /* FeedViewControlleTests+Assertions.swift */,
-				FF65CBF92E0C84D900946C18 /* LoaderSpy+TestHelpers.swift */,
+				FF65CBF92E0C84D900946C18 /* FeedUIIntergrationTests+TestHelpers.swift */,
 				FF65CBFA2E0C84D900946C18 /* UIButton+TestHelpers.swift */,
 				FF65CBFB2E0C84D900946C18 /* UIControl+TestHelpers.swift */,
 				FF65CBFC2E0C84D900946C18 /* UIImage+TestHelpers.swift */,
@@ -363,7 +363,7 @@
 				FF65CBE92E0C821D00946C18 /* SceneDelegateTests.swift in Sources */,
 				FF65CC092E0C84EF00946C18 /* FeedUIIntergrationTests.swift in Sources */,
 				FF65CBFF2E0C84D900946C18 /* ListViewController+TestHelpers.swift in Sources */,
-				FF65CC002E0C84D900946C18 /* LoaderSpy+TestHelpers.swift in Sources */,
+				FF65CC002E0C84D900946C18 /* FeedUIIntergrationTests+TestHelpers.swift in Sources */,
 				FF65CC012E0C84D900946C18 /* UIButton+TestHelpers.swift in Sources */,
 				FF65CC022E0C84D900946C18 /* UIImage+TestHelpers.swift in Sources */,
 				FF65CC032E0C84D900946C18 /* UIRefreshControl+TestHelpers.swift in Sources */,
