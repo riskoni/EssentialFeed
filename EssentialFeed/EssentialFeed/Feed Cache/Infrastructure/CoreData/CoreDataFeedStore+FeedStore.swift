@@ -10,7 +10,7 @@ import CoreData
 extension CoreDataFeedStore: FeedStore {
     
     public func retrieve(completion: @escaping RetrievalCompletion) {
-        perform { context in
+        performAsync { context in
             let request = NSFetchRequest<FeedEntity>(entityName: FeedEntity.className())
             request.returnsObjectsAsFaults = false
             do{
@@ -24,7 +24,7 @@ extension CoreDataFeedStore: FeedStore {
     }
     
     public func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
-        perform { context in
+        performAsync { context in
             
             try? CoreDataFeedStore.deleteAllFeedEntities(context: context)
             
@@ -39,7 +39,7 @@ extension CoreDataFeedStore: FeedStore {
     }
     
     public func deleteCachedFeed(completion: @escaping DeletionCompletion) {
-        perform { context in
+        performAsync { context in
             do{
                 try CoreDataFeedStore.deleteAllFeedEntities(context: context)
                 completion(.success(()))
