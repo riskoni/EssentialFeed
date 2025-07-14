@@ -34,26 +34,4 @@ public class RemoteFeedImageDataLoader: FeedImageDataLoader {
         return task
     }
     
-    
-    private final class HTTPTaskWrapper: FeedImageDataLoaderTask {
-        var wrapped: HTTPClientTask?
-        private var completion: ((FeedImageDataLoader.Result) -> Void)?
-
-        init(_ completion: @escaping (FeedImageDataLoader.Result) -> Void) {
-            self.completion = completion
-        }
-        
-        func complete(with result: FeedImageDataLoader.Result) {
-            completion?(result)
-        }
-        
-        func cancel() {
-            preventFurtherCompletions()
-            wrapped?.cancel()
-        }
-        private func preventFurtherCompletions() {
-            completion = nil
-        }
-        
-    }
 }
