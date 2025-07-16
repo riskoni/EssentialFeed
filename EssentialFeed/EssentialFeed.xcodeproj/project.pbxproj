@@ -206,8 +206,6 @@
 		97F2242F2BFBD7B200B656FF /* EssentialFeed.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeed.xctestplan; sourceTree = "<group>"; };
 		97F224342BFBDB5700B656FF /* EssentialFeedAPIEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAPIEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97F224362BFBDB5700B656FF /* EssentialFeedAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAPIEndToEndTests.swift; sourceTree = "<group>"; };
-		97F57F9C2C07CDE300EEAA7F /* CI_macOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI_macOS.xctestplan; sourceTree = "<group>"; };
-		97F57F9D2C07CE2A00EEAA7F /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = CI_iOS.xctestplan; path = ../CI_iOS.xctestplan; sourceTree = "<group>"; };
 		FF05EE5A2DF8CD8900E7711D /* FeedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCache.swift; sourceTree = "<group>"; };
 		FF05EE642DF8D53100E7711D /* FeedImageDataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataCache.swift; sourceTree = "<group>"; };
 		FF0EF6402E1B25EF0004F0AB /* Shared.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Shared.xcstrings; sourceTree = "<group>"; };
@@ -344,8 +342,6 @@
 		971A664D2B25F57500125DAC = {
 			isa = PBXGroup;
 			children = (
-				97F57F9C2C07CDE300EEAA7F /* CI_macOS.xctestplan */,
-				97F57F9D2C07CE2A00EEAA7F /* CI_iOS.xctestplan */,
 				97F2242F2BFBD7B200B656FF /* EssentialFeed.xctestplan */,
 				971A66592B25F57500125DAC /* EssentialFeed */,
 				971A66632B25F57600125DAC /* EssentialFeedTests */,
