@@ -23,8 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         return DispatchQueue(
             label: "com.essentialdeveloper.infra.queue",
-            qos: .userInitiated,
-            attributes: .concurrent
+            qos: .userInitiated
         ).eraseToAnyScheduler()
     }()
         
@@ -42,7 +41,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                     .appendingPathComponent("feed-store.sqlite"))
         } catch {
             logger.fault("Failed to instantiate CoreData store with error: \(error.localizedDescription)")
-            return NullStore()
+            return InMemoryFeedStore()
         }
     }()
     
