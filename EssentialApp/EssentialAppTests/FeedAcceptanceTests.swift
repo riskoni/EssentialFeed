@@ -219,48 +219,6 @@ class FeedAcceptanceTests: XCTestCase {
         }
     }
 
-    
-    private class InMemoryFeedStore: FeedStore, FeedImageDataStore {
-        private(set) var feedCache: CachedFeed?
-        private var feedImageDataCache = NSCache<NSURL, NSData>()
-
-        private init(feedCache: CachedFeed? = nil) {
-            self.feedCache = feedCache
-        }
-        
-        public func deleteCachedFeed() throws {
-            feedCache = nil
-        }
-        
-        public func insert(_ feed: [LocalFeedImage], timestamp: Date) throws {
-            feedCache = CachedFeed(feed: feed, timestamp: timestamp)
-        }
-        
-        public func retrieve() throws -> CachedFeed? {
-            feedCache
-        }
-        
-        func insert(_ data: Data, for url: URL) throws {
-            feedImageDataCache.setObject(data as NSData, forKey: url as NSURL)
-        }
-        
-        func retrieve(dataForURL url: URL) throws -> Data? {
-            feedImageDataCache.object(forKey: url as NSURL) as Data?
-        }
-        
-        
-        static var empty: InMemoryFeedStore {
-            InMemoryFeedStore()
-        }
-        
-        static var withExpiredFeedCache: InMemoryFeedStore {
-            InMemoryFeedStore(feedCache: CachedFeed(feed: [], timestamp: Date.distantPast))
-        }
-        
-        static var withNonExpiredFeedCache: InMemoryFeedStore {
-            InMemoryFeedStore(feedCache: CachedFeed(feed: [], timestamp: Date()))
-        }
-    }
 }
 
 extension CoreDataFeedStore {
