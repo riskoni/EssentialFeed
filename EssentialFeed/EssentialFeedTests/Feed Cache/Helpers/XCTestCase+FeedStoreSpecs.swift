@@ -135,12 +135,12 @@ extension FeedStoreSpecs where Self: XCTestCase {
         }
     }
     
-    func expect(_ sut: FeedStore, toRetrieveTwice expectedReuslt: FeedStore.RetrievalResult, file: StaticString = #filePath, line: UInt = #line){
-        expect(sut, toRetrieve: expectedReuslt, file: file, line: line)
-        expect(sut, toRetrieve: expectedReuslt, file: file, line: line)
+    func expect(_ sut: FeedStore, toRetrieveTwice expectedResult: Result<CachedFeed?, Error>, file: StaticString = #filePath, line: UInt = #line){
+        expect(sut, toRetrieve: expectedResult, file: file, line: line)
+        expect(sut, toRetrieve: expectedResult, file: file, line: line)
     }
     
-    func expect(_ sut: FeedStore, toRetrieve expectedReuslt: FeedStore.RetrievalResult, file: StaticString = #filePath, line: UInt = #line){
+    func expect(_ sut: FeedStore, toRetrieve expectedReuslt: Result<CachedFeed?, Error>, file: StaticString = #filePath, line: UInt = #line){
         let retrievedResult = Result { try sut.retrieve() }
         
         switch (expectedReuslt, retrievedResult) {
