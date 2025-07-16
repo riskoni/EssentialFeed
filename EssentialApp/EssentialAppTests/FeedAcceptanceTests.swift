@@ -218,36 +218,36 @@ class FeedAcceptanceTests: XCTestCase {
             HTTPClientStub { url in .success(stub(url)) }
         }
     }
+
     
     private class InMemoryFeedStore: FeedStore, FeedImageDataStore {
         private(set) var feedCache: CachedFeed?
-        private var feedImageDataCache: [URL: Data] = [:]
-        
+        private var feedImageDataCache = NSCache<NSURL, NSData>()
+
         private init(feedCache: CachedFeed? = nil) {
             self.feedCache = feedCache
         }
         
-        func deleteCachedFeed(completion: @escaping FeedStore.DeletionCompletion) {
+        public func deleteCachedFeed() throws {
             feedCache = nil
-            completion(.success(()))
         }
         
-        func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping FeedStore.InsertionCompletion) {
+        public func insert(_ feed: [LocalFeedImage], timestamp: Date) throws {
             feedCache = CachedFeed(feed: feed, timestamp: timestamp)
-            completion(.success(()))
         }
         
-        func retrieve(completion: @escaping FeedStore.RetrievalCompletion) {
-            completion(.success(feedCache))
+        public func retrieve() throws -> CachedFeed? {
+            feedCache
         }
         
         func insert(_ data: Data, for url: URL) throws {
-            feedImageDataCache[url] = data
+            feedImageDataCache.setObject(data as NSData, forKey: url as NSURL)
         }
         
         func retrieve(dataForURL url: URL) throws -> Data? {
-            feedImageDataCache[url]
+            feedImageDataCache.object(forKey: url as NSURL) as Data?
         }
+        
         
         static var empty: InMemoryFeedStore {
             InMemoryFeedStore()

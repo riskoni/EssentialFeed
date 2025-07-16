@@ -16,7 +16,6 @@ public final class CoreDataFeedStore {
         case failedToLoadPersistentContainer(Error)
     }
 
-    
     private let container: NSPersistentContainer
     private let context: NSManagedObjectContext
     
@@ -40,16 +39,15 @@ public final class CoreDataFeedStore {
         cleanUpReferencesToPersistentStores()
     }
     
+    public func perform(_ action: @escaping () -> Void) {
+        context.perform(action)
+    }
+    
     private func cleanUpReferencesToPersistentStores() {
         context.performAndWait {
             let coordinator = self.container.persistentStoreCoordinator
             try? coordinator.persistentStores.forEach(coordinator.remove)
         }
-    }
-    
-    func performAsync(_ action: @escaping (NSManagedObjectContext) -> Void) {
-        let context = self.context
-        context.perform { action(context) }
     }
     
     func performSync<R>(_ action: (NSManagedObjectContext) -> Result<R, Error>) throws -> R {

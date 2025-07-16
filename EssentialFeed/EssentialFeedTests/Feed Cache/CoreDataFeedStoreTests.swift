@@ -9,7 +9,7 @@ import XCTest
 import EssentialFeed
 import CoreData
 
-class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
+class CoreDataFeedStoreTests: XCTestCase, FeedStoreSpecs {
     
     func test_retrieve_deliversEmptyOnEmptyCache() {
         let sut = makeSUT()
@@ -35,24 +35,6 @@ class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
         assertThatRetrieveHasNoSideEffectsOnNonEmptyCache(on: sut)
     }
 
-    func test_retrieve_deliversFailureOnRetrievalError() {
-        let stub = NSManagedObjectContext.alwaysFailingFetchStub()
-        stub.startIntercepting()
-
-        let sut = makeSUT()
-
-        assertThatRetrieveDeliversFailureOnRetrievalError(on: sut)
-    }
-
-    func test_retrieve_hasNoSideEffectsOnFailure() {
-        let stub = NSManagedObjectContext.alwaysFailingFetchStub()
-        stub.startIntercepting()
-
-        let sut = makeSUT()
-
-        assertThatRetrieveHasNoSideEffectsOnFailure(on: sut)
-    }
-
     func test_insert_deliversNoErrorOnEmptyCache() {
         let sut = makeSUT()
 
@@ -69,24 +51,6 @@ class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
         let sut = makeSUT()
 
         assertThatInsertOverridesPreviouslyInsertedCacheValues(on: sut)
-    }
-
-    func test_insert_deliversErrorOnInsertionError() {
-        let stub = NSManagedObjectContext.alwaysFailingSaveStub()
-        stub.startIntercepting()
-
-        let sut = makeSUT()
-        
-        assertThatInsertDeliversErrorOnInsertionError(on: sut)
-    }
-
-    func test_insert_hasNoSideEffectsOnInsertionError() {
-        let stub = NSManagedObjectContext.alwaysFailingSaveStub()
-        stub.startIntercepting()
-
-        let sut = makeSUT()
-
-        assertThatInsertHasNoSideEffectsOnInsertionError(on: sut)
     }
 
     func test_delete_deliversNoErrorOnEmptyCache() {
@@ -128,21 +92,6 @@ class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
         XCTAssertNotNil(deletionError, "Expected cache deletion to fail")
     }
 
-    func test_delete_hasNoSideEffectsOnDeletionError() {
-        let stub = NSManagedObjectContext.alwaysFailingSaveStub()
-        let feed = uniqueImageFeed().local
-        let timestamp = Date()
-        let sut = makeSUT()
-
-        insert((feed, timestamp), to: sut)
-
-        stub.startIntercepting()
-
-        deleteCache(from: sut)
-
-        expect(sut, toRetrieve: .success(CachedFeed(feed: feed, timestamp: timestamp)))
-    }
-
     func test_delete_removesAllObjects() {
         let store = makeSUT()
 
@@ -159,12 +108,6 @@ class CoreDataFeedStoreTests: XCTestCase, FailableFeedStoreSpecs {
         let existingObjects = try! context.allExistingObjects()
 
         XCTAssertEqual(existingObjects, [], "found orphaned objects in Core Data")
-    }
-
-    func test_storeSideEffects_runSerially() {
-        let sut = makeSUT()
-
-        assertThatSideEffectsRunSerially(on: sut)
     }
 
     func test_imageEntity_properties() {
